@@ -3,10 +3,6 @@
 require('dotenv').config();
 const app = require('./app');
 const dbconnection = require('./db/dbconnection');
-const cors=require('cors');
-app.use(cors({
-    origin:['http://localhost:3000/','http://localhost:3000']
-}));
 
 //connecing mongodb
 const URL = process.env.MongoURL

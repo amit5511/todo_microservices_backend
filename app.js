@@ -5,6 +5,12 @@ const subscriber = require('./db/mqttconnection');
 const publisher = require('./db/mqttconnection');
 const Todo = require('./model/todomodel');
 
+const cors=require('cors');
+app.use(cors({
+    origin:"*",
+    credentials:true
+}));
+
 
 subscriber.subscribe("/add")
 subscriber.on("message", async(cahnnel,data) => {
