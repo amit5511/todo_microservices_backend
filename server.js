@@ -5,13 +5,11 @@ const app = require('./app');
 const dbconnection = require('./db/dbconnection');
 
 const cors = require('cors')
-const corsOptions = {
-    origin: ['https://brown-salesmen-ztxbw.pwskills.app:3001'],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, 
-  };
+
   
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: 'https://brown-salesmen-ztxbw.pwskills.app:3001'
+}));
 
 //connecing mongodb
 const URL = process.env.MongoURL
