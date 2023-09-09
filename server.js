@@ -5,10 +5,7 @@ const app = require('./app');
 const dbconnection = require('./db/dbconnection');
 const cors=require('cors');
 app.use(cors({
-    credentials: true,
-    origin:'*',
-   
-   
+    origin:'*', 
 }));
 
 //connecing mongodb
